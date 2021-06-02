@@ -14,10 +14,25 @@ Product.belongsTo(Category, {
 });
 
 // Categories have many Products
+Category.hasMany(Product, {
+  foreignKey: 'category_id',
+});
 
+// https://sequelize.org/v3/docs/associations/
 // Products belongToMany Tags (through ProductTag)
 
+//does as: 'product_tags' need to be there if through is used?
+Product.belongsToMany(Tag, {
+  through: ProductTag,
+  foreignKey: 'product_id',
+});
+
 // Tags belongToMany Products (through ProductTag)
+Tag.belongsToMany(Product, {
+  through: ProductTag,
+  foreignKey: 'tag_id',
+});
+
 
 module.exports = {
   Product,
