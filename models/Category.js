@@ -14,6 +14,11 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    //category name column- string
+    category_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
