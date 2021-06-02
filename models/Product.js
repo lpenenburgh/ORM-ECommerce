@@ -37,6 +37,15 @@ Product.init(
         isNumeric: true,
       },
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      //refers to the primary key (id) in the category model
+      references: {
+        model: 'category',
+        key: 'id',
+      },
+    },
 
   },
   {
