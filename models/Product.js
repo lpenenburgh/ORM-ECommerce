@@ -20,6 +20,24 @@ Product.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    price: {
+      //DECIMAL(total # of digits, # of digits after decimal point). 
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false,
+      validate: {
+        isDecimal: true,
+      },
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      //default value will be added if no other value is specified
+      defaultValue: 10,
+      validate: {
+        isNumeric: true,
+      },
+    },
+
   },
   {
     sequelize,
