@@ -7,6 +7,10 @@ A back-end application for e-commerce sites to keep track of inventory. Utilizin
 
 
 
+## Demonstration Video
+[Watch Demo Here](https://vimeo.com/558771364)
+
+
 ## Installation
 This application requires the user to have Node, MySQL Workbench, Express, and Sequelize installed to work. The application runs using the server.js file.Next steps include:
 * Create database in MySQL Workbench
