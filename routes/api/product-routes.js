@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
   try {
     const product = await Product.findAll({
       include: [
+        //refers to relationship formed in models/index.js
         Category, 
           { model: Tag,
             through: ProductTag,
@@ -30,6 +31,7 @@ router.get('/:id', async (req, res) => {
         id: req.params.id,
       }, 
       include: [
+        //refers to relationship formed in models/index.js
         Category,
         { model: Tag, 
           through: ProductTag,
